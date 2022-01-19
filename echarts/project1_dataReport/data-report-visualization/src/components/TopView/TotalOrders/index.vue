@@ -1,10 +1,17 @@
 <template>
-  <div></div>
+  <common-card/>
 </template>
 
 <script>
+import CommonCard from '../CommonCard'
+import commonCardMixin from "../../../mixins/commonCardMixin";
+
 export default {
-  name: 'TotalOrders'
+  name: 'TotalOrders',
+  mixins: [commonCardMixin],
+  comments: {
+    CommonCard
+  }
 }
 </script>
 
