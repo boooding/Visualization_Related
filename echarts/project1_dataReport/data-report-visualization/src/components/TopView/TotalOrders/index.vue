@@ -4,7 +4,7 @@
 
 <script>
 import CommonCard from '../CommonCard'
-import commonCardMixin from "../../../mixins/commonCardMixin";
+import commonCardMixin from '../../../mixins/commonCardMixin'
 
 export default {
   name: 'TotalOrders',
