@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Echarts</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.js"></script>
+    <style>
+        #chart{
+            width: 800px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+<div id="chart"></div>
+<script>
+    const chartDom = document.getElementById('chart');
+    const chart = echarts.init(chartDom);
+    chart.setOption({
+        dataset: {
+            source:[
+                ['hiphop', 100, 200],
+                ['house', 150, 150],
+                ['breaking', 70, 100]
+            ]
+        },
+        title: {
+            text: 'echarts beginning'
+        },
+        xAxis: {
+            data: ['hiphop', 'house', 'breaking']
+        },
+        yAxis: {},
+        series: [{
+            type: 'bar',
+            encode: {
+                x: 0, y: 1
+            }
+
+        },{
+            type: 'pie',
+            center: [600, 70],
+            radius: 35,
+            encode: {
+                itemName: 0, value: 1
+            }
+        }, {
+            type: 'line',
+            encode: {
+                x: 0, y: 2
+            }
+        }]
+    });
+</script>
+</body>
+</html>
