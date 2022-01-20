@@ -1,5 +1,15 @@
 <template>
-  <common-card/>
+  <common-card
+    title="Total Order Number"
+    value="20,212"
+  >
+    <template>
+    </template>
+    <template v-slot:footer>
+      <span>Order Number Last day </span>
+      <span class="emphasis">{{orderLastDay}}</span>
+    </template>
+  </common-card>
 </template>
 
 <script>
